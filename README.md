@@ -1,12 +1,12 @@
 # **HR-ATTRITION-MODELLING USING RANDOM FOREST**
 
-## **Project Overview**
+### **Project Overview**
 
 **Employee attrition** refers to the gradual yet deliberate reduction in a company’s workforce, typically occurring when employees leave and are not replaced. This turnover can be **voluntary** (resignations, retirements) or **involuntary** (terminations, layoffs). While some attrition is natural, high or unmanaged attrition can significantly disrupt business operations.
 
 Attrition can negatively impact a company’s **workflow**, **employee morale**, and **client satisfaction**. In severe cases, persistent attrition may even threaten a company’s ability to operate effectively or remain in business.
 
-### **Common Causes of Employee Attrition:**
+#### **Common Causes of Employee Attrition:**
 
 * Low or uncompetitive pay
 * Desire for a different work environment
@@ -25,8 +25,9 @@ To prevent these issues from escalating, it's critical for companies to **monito
 4. **Create an interactive dashboard** for the Human Resources (HR) department to visually track and monitor attrition trends in real time.
 
 ---
+## **CONCLUSIONS AND RECOMENDATIONS**
 
-## **Conclusions**
+### **Conclusions**
 
 From our analysis, several key insights emerged regarding employee attrition:
 
@@ -56,9 +57,7 @@ From our analysis, several key insights emerged regarding employee attrition:
   * **Gender**
   * **Business Travel**
 
----
-
-## **Recommendations**
+### **Recommendations**
 
 Based on these insights, the following actions are recommended to reduce attrition:
 
