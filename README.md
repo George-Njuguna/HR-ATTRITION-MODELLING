@@ -37,6 +37,8 @@ From our analysis, several key insights emerged regarding employee attrition:
 
 * **Travel Frequency**: Employees who **rarely travel** account for the highest attrition rate (**65.8%**), possibly reflecting dissatisfaction or job monotony.
 
+* **Age**: Younger employees **(typically aged 18–35)** show the highest attrition rates, indicating that early-career employees may be more likely to leave for better opportunities or due to dissatisfaction. In contrast, older employees **(aged 50 and above)** exhibit very low attrition, reflecting greater job stability or satisfaction in later career stages.
+
 * **Job Involvement**: Those with **low job involvement** (Level 1) are more likely to leave, with an attrition rate of **34%**, highlighting the importance of employee engagement.
 
 * **Education Level**: Employees with the **lowest education level** have the highest attrition, suggesting that **higher educational attainment may be linked to better retention**.
