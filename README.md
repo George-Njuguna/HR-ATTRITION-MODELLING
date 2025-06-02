@@ -16,7 +16,6 @@ Attrition can negatively impact a company’s **workflow**, **employee morale**,
 
 To prevent these issues from escalating, it's critical for companies to **monitor**, **analyze**, and **understand** the underlying reasons behind employee departures. This knowledge enables businesses to proactively implement strategies that foster retention and maintain productivity.
 
----
 
 ### **Project Objectives**
 
@@ -25,7 +24,7 @@ To prevent these issues from escalating, it's critical for companies to **monito
 3. **Provide actionable insights and recommendations** to reduce attrition based on analytical findings.
 4. **Create an interactive dashboard** for the Human Resources (HR) department to visually track and monitor attrition trends in real time.
 
-
+---
 
 ## **Conclusions**
 
