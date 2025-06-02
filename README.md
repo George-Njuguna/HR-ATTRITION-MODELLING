@@ -1,5 +1,5 @@
 # **HR-ATTRITION-MODELLING USING RANDOM FOREST**
----
+
 ## **Project Overview**
 
 **Employee attrition** refers to the gradual yet deliberate reduction in a company’s workforce, typically occurring when employees leave and are not replaced. This turnover can be **voluntary** (resignations, retirements) or **involuntary** (terminations, layoffs). While some attrition is natural, high or unmanaged attrition can significantly disrupt business operations.
