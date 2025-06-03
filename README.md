@@ -47,31 +47,28 @@ From our analysis, several key insights emerged regarding employee attrition:
 
 * **Feature Importance (Model Insight)**: According to the machine learning model, the top five features contributing to attrition are:
 
+  * **Stock Option Level**
+  * **Job Satisfaction**
   * **Monthly Income**
-  * **Age**
-  * **Total Working Years**
-  * **Monthly Rate**
-  * **Daily Rate**
 
   Conversely, the **least important features** include:
 
   * **Performance Rating**
+  * **Department**
   * **Gender**
-  * **Business Travel**
 
 ### **Recommendations**
 
 Based on these insights, the following actions are recommended to reduce attrition:
 
-1. **Improve Employee Engagement**: Target employees with low job involvement through mentorship programs, growth plans, or role adjustments to boost commitment.
+1. **Expand the use of employee stock ownership plans (ESOPs)** and tie them to performance or tenure to incentivize long-term commitment
 
-2. **Department-Specific Strategies**: Focus retention efforts on the **Research and Development** department and **Laboratory Technicians**, such as providing additional training, recognition, or career development paths.
+2. **Strengthen employee engagement strategies** that target  the younger age groups  through mentorship programs, career development paths, and recognition initiatives.
 
-3. **Review Compensation Structures**: Since **monthly income** is a top predictor of attrition, evaluate pay competitiveness and consider incentives for long-term retention.
+3. **Review Compensation Structures**: like offering financial wellness programs or incentives and introducing performance based bonuses.
 
 4. **Address Work-Life Balance and Satisfaction**: Regularly assess employee satisfaction and implement initiatives such as flexible hours, wellness programs, or anonymous feedback systems.
 
-5. **Personalize Development for Lower-Education Employees**: Offer career advancement programs or educational support to enhance retention among employees with lower educational backgrounds.
 
 
 
