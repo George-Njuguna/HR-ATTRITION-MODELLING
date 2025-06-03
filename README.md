@@ -33,8 +33,6 @@ From our analysis, several key insights emerged regarding employee attrition:
 
 * **Overall Attrition Rate**: The company’s attrition rate stands at **16.1%**, indicating that the majority of employees are retained.
 
-* **Departmental Impact**: The **Research and Development** department has the highest attrition rate (**56.1%**), signaling a potential area of concern. Within job roles, **Laboratory Technicians** face the highest attrition at **26.2%**.
-
 * **Travel Frequency**: Employees who **rarely travel** account for the highest attrition rate (**65.8%**), possibly reflecting dissatisfaction or job monotony.
 
 * **Age**: Younger employees **(typically aged 18–35)** show the highest attrition rates, indicating that early-career employees may be more likely to leave for better opportunities or due to dissatisfaction. In contrast, older employees **(aged 50 and above)** exhibit very low attrition, reflecting greater job stability or satisfaction in later career stages.
@@ -68,7 +66,4 @@ Based on these insights, the following actions are recommended to reduce attriti
 3. **Review Compensation Structures**: like offering financial wellness programs or incentives and introducing performance based bonuses.
 
 4. **Address Work-Life Balance and Satisfaction**: Regularly assess employee satisfaction and implement initiatives such as flexible hours, wellness programs, or anonymous feedback systems.
-
-
-
 
