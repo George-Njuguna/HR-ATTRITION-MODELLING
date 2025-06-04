@@ -32,6 +32,7 @@ To prevent these issues from escalating, it's critical for companies to **monito
 From our analysis, several key insights emerged regarding employee attrition:
 
 * **Overall Attrition Rate**: The company’s attrition rate stands at **16.1%**, indicating that the majority of employees are retained.
+![alt text](image.png)
 
 * **Travel Frequency**: Employees who **rarely travel** account for the highest attrition rate (**65.8%**), possibly reflecting dissatisfaction or job monotony.
 
