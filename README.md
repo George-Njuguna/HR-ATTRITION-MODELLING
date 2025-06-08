@@ -67,3 +67,6 @@ Based on these insights, the following actions are recommended to reduce attriti
 
 4. **Address Work-Life Balance and Satisfaction**: Regularly assess employee satisfaction and implement initiatives such as flexible hours, wellness programs, or anonymous feedback systems.
 
+![alt text(Dashboard.png)]
+
+
