@@ -32,10 +32,10 @@ To prevent these issues from escalating, it's critical for companies to **monito
 From our analysis, several key insights emerged regarding employee attrition:
 
 * **Overall Attrition Rate**: The company’s attrition rate stands at **16.1%**, indicating that the majority of employees are retained.
-
+![image](https://github.com/user-attachments/assets/d4f8b672-651e-45a3-a70a-d27a3b2a681a)
 
 * **Age**: Younger employees **(typically aged 18–35)** show the highest attrition rates, indicating that early-career employees may be more likely to leave for better opportunities or due to dissatisfaction. In contrast, older employees **(aged 50 and above)** exhibit very low attrition, reflecting greater job stability or satisfaction in later career stages.
-![image](https://github.com/user-attachments/assets/d4f8b672-651e-45a3-a70a-d27a3b2a681a)
+![image](https://github.com/user-attachments/assets/396e28fd-3499-4e3f-8d3a-1c1684f48059)
 
 * **Education Level**: Employees with the **lowest education level** have the highest attrition, suggesting that **higher educational attainment may be linked to better retention**.
 
