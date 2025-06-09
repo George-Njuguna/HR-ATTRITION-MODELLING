@@ -35,7 +35,8 @@ From our analysis, several key insights emerged regarding employee attrition:
 
 
 * **Age**: Younger employees **(typically aged 18–35)** show the highest attrition rates, indicating that early-career employees may be more likely to leave for better opportunities or due to dissatisfaction. In contrast, older employees **(aged 50 and above)** exhibit very low attrition, reflecting greater job stability or satisfaction in later career stages.
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/025d6f94-4415-4a80-9a68-fcaa270c3668)
+
 
 * **Education Level**: Employees with the **lowest education level** have the highest attrition, suggesting that **higher educational attainment may be linked to better retention**.
 
