@@ -69,5 +69,7 @@ Based on these insights, the following actions are recommended to reduce attriti
 
 ![image](https://github.com/user-attachments/assets/e73f30ca-0146-4ef2-8a35-66c9bdd4ab65)
 
+https://public.tableau.com/app/profile/g.njuguna/viz/Attrition_17494125761940/HRAttritionDashboard
+
 
 
