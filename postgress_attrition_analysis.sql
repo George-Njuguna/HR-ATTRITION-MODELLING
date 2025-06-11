@@ -114,4 +114,126 @@ as(
     group by gender)
 select * ,
       round((counts/sum(counts)over())*100,2) as percent
-from t1;
+from t1; 
+
+ /* Getting the attrition rates*/
+/*Gender*/
+with t1(gender,counts,attrition)
+as(
+    select gender , 
+       count(gender),
+       attrition
+    from hr_attrition
+    group by gender , attrition)
+select a.gender,
+       round((a.counts::decimal/sum(a.counts)over())*100,1) as retention_rate,
+       round((b.counts::decimal/sum(b.counts)over())*100,1) as attrition_rate
+from t1 a
+join t1 b 
+    on a.gender=b.gender
+where a.attrition = 'No' and
+b.attrition = 'Yes';
+
+/*Marital status*/
+with t1(marital_status,counts,attrition)
+as(
+    select marital_status , 
+       count(marital_status),
+       attrition
+    from hr_attrition
+    group by marital_status , attrition)
+select a.marital_status,
+       round((a.counts::decimal/sum(a.counts)over())*100,1) as retention_rate,
+       round((b.counts::decimal/sum(b.counts)over())*100,1) as attrition_rate
+from t1 a
+join t1 b 
+    on a.marital_status=b.marital_status
+where a.attrition = 'No' and
+b.attrition = 'Yes';
+
+/*Business Travel*/
+with t1(business_travel,counts,attrition)
+as(
+    select business_travel , 
+       count(business_travel),
+       attrition
+    from hr_attrition
+    group by business_travel , attrition)
+select a.business_travel,
+       round((a.counts::decimal/sum(a.counts)over())*100,1) as retention_rate,
+       round((b.counts::decimal/sum(b.counts)over())*100,1) as attrition_rate
+from t1 a
+join t1 b 
+    on a.business_travel=b.business_travel
+where a.attrition = 'No' and
+b.attrition = 'Yes';
+
+/*Department*/
+with t1(department,counts,attrition)
+as(
+    select department , 
+       count(department),
+       attrition
+    from hr_attrition
+    group by department , attrition)
+select a.department,
+       round((a.counts::decimal/sum(a.counts)over())*100,1) as retention_rate,
+       round((b.counts::decimal/sum(b.counts)over())*100,1) as attrition_rate
+from t1 a
+join t1 b 
+    on a.department=b.department
+where a.attrition = 'No' and
+b.attrition = 'Yes';
+
+/*Education Field*/
+with t1(education_field,counts,attrition)
+as(
+    select education_field , 
+       count(education_field),
+       attrition
+    from hr_attrition
+    group by education_field , attrition)
+select a.education_field,
+       round((a.counts::decimal/sum(a.counts)over())*100,1) as retention_rate,
+       round((b.counts::decimal/sum(b.counts)over())*100,1) as attrition_rate
+from t1 a
+join t1 b 
+    on a.education_field=b.education_field
+where a.attrition = 'No' and
+b.attrition = 'Yes';
+
+/*Job Role*/
+with t1(job_role,counts,attrition)
+as(
+    select job_role , 
+       count(job_role),
+       attrition
+    from hr_attrition
+    group by job_role , attrition)
+select a.job_role,
+       round((a.counts::decimal/sum(a.counts)over())*100,1) as retention_rate,
+       round((b.counts::decimal/sum(b.counts)over())*100,1) as attrition_rate
+from t1 a
+join t1 b 
+    on a.job_role=b.job_role
+where a.attrition = 'No' and
+b.attrition = 'Yes';
+
+/*Overtime*/
+with t1(Overtime,counts,attrition)
+as(
+    select Overtime , 
+       count(Overtime),
+       attrition
+    from hr_attrition
+    group by Overtime , attrition)
+select a.Overtime,
+       round((a.counts::decimal/sum(a.counts)over())*100,1) as retention_rate,
+       round((b.counts::decimal/sum(b.counts)over())*100,1) as attrition_rate
+from t1 a
+join t1 b 
+    on a.Overtime=b.Overtime
+where a.attrition = 'No' and
+b.attrition = 'Yes';
+
+
