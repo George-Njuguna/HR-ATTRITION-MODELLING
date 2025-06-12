@@ -236,4 +236,124 @@ join t1 b
 where a.attrition = 'No' and
 b.attrition = 'Yes';
 
+/*Education*/
+select education , count(education)
+from hr_attrition
+group by education;
+
+with t1(education,attrition,counts)
+as(
+    select education ,attrition, count(education)
+    from hr_attrition
+    group by education,attrition
+)
+select a.education as education,
+    round((a.counts::decimal/sum(a.counts)over())*100,2) as rate0,
+    round((b.counts::decimal/sum(b.counts)over())*100,2) as rate1
+from t1 a 
+join t1 b 
+    on a.education = b.education
+where a.attrition = 'No' and 
+    b.attrition = 'Yes';
+
+/*Job level*/
+select job_level , count(job_level)
+from hr_attrition
+group by job_level;
+
+with t1(job_level,attrition,counts)
+as(
+    select job_level ,attrition, count(job_level)
+    from hr_attrition
+    group by job_level,attrition
+)
+select a.job_level as job_level,
+    round((a.counts::decimal/sum(a.counts)over())*100,2) as rate0,
+    round((b.counts::decimal/sum(b.counts)over())*100,2) as rate1
+from t1 a 
+join t1 b 
+    on a.job_level = b.job_level
+where a.attrition = 'No' and 
+    b.attrition = 'Yes';
+
+/*Job involvement*/
+select job_involvement , count(job_involvement)
+from hr_attrition
+group by job_involvement;
+
+with t1(job_involvement,attrition,counts)
+as(
+    select job_involvement ,attrition, count(job_involvement)
+    from hr_attrition
+    group by job_involvement,attrition
+)
+select a.job_involvement as job_involvement,
+    round((a.counts::decimal/sum(a.counts)over())*100,2) as rate0,
+    round((b.counts::decimal/sum(b.counts)over())*100,2) as rate1
+from t1 a 
+join t1 b 
+    on a.job_involvement = b.job_involvement
+where a.attrition = 'No' and 
+    b.attrition = 'Yes';
+
+/*Job satisfaction*/
+select job_satisfaction , count(job_satisfaction)
+from hr_attrition
+group by job_satisfaction;
+
+with t1(job_satisfaction,attrition,counts)
+as(
+    select job_satisfaction ,attrition, count(job_satisfaction)
+    from hr_attrition
+    group by job_satisfaction,attrition
+)
+select a.job_satisfaction as job_satisfaction,
+    round((a.counts::decimal/sum(a.counts)over())*100,2) as rate0,
+    round((b.counts::decimal/sum(b.counts)over())*100,2) as rate1
+from t1 a 
+join t1 b 
+    on a.job_satisfaction = b.job_satisfaction
+where a.attrition = 'No' and 
+    b.attrition = 'Yes';
+
+/*relationship satisfaction*/
+select relationship_satisfaction , count(relationship_satisfaction)
+from hr_attrition
+group by relationship_satisfaction;
+
+with t1(relationship_satisfaction,attrition,counts)
+as(
+    select relationship_satisfaction ,attrition, count(relationship_satisfaction)
+    from hr_attrition
+    group by relationship_satisfaction,attrition
+)
+select a.relationship_satisfaction as relationship_satisfaction,
+    round((a.counts::decimal/sum(a.counts)over())*100,2) as rate0,
+    round((b.counts::decimal/sum(b.counts)over())*100,2) as rate1
+from t1 a 
+join t1 b 
+    on a.relationship_satisfaction = b.relationship_satisfaction
+where a.attrition = 'No' and 
+    b.attrition = 'Yes';
+
+/*work life balance*/
+select work_life_balance , count(work_life_balance)
+from hr_attrition
+group by work_life_balance;
+
+with t1(work_life_balance,attrition,counts)
+as(
+    select work_life_balance ,attrition, count(work_life_balance)
+    from hr_attrition
+    group by work_life_balance,attrition
+)
+select a.work_life_balance as work_life_balance,
+    round((a.counts::decimal/sum(a.counts)over())*100,2) as rate0,
+    round((b.counts::decimal/sum(b.counts)over())*100,2) as rate1
+from t1 a 
+join t1 b 
+    on a.work_life_balance = b.work_life_balance
+where a.attrition = 'No' and 
+    b.attrition = 'Yes';
+
 
