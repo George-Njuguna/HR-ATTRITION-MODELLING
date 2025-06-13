@@ -41,7 +41,7 @@ From our analysis, several key insights emerged regarding employee attrition:
 
 * **Satisfaction Metrics**: Employees reporting **low satisfaction** in **job satisfaction, environment satisfaction, relationship satisfaction**, and **work-life balance** tend to have lower retention rates.
 
-* **Feature Importance (Model Insight)**: According to the machine learning model, the top five features contributing to attrition are:
+* **Feature Importance (Model Insight)**: According to the machine learning model, the top  features contributing to attrition are:
 
   * **Stock Option Level**
   * **Job Satisfaction**
