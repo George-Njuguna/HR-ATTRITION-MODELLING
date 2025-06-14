@@ -381,3 +381,28 @@ from t2 a
 join t2 b
     on a.grouped_ages=b.grouped_ages
 where a.attrition = 'No' and b.attrition='Yes';
+
+/*grouping the Ages*/
+with t1 (attrition,grouped_monthly_income)
+    as (
+        select attrition , 
+            case
+                when monthly_income <=5000 then '<5000'
+                when monthly_income >5000 and monthly_income <= 10000 then '5000-10000'   /*grouping monthly income*/
+                when monthly_income >10000 then '>10000'
+                end as grouped_age
+        from hr_attrition
+    ),
+    t2(attrition,grouped_monthly_income,counts)
+    as (
+        select attrition ,grouped_monthly_income, count(grouped_monthly_income)
+        from t1 
+        group by grouped_monthly_income,attrition
+    )
+select a.attrition , a.grouped_monthly_income,
+        round((a.counts::decimal/(a.counts+b.counts))*100,2) as rate0,
+        round((b.counts::decimal/(a.counts+b.counts))*100,2) as rate1
+from t2 a
+join t2 b
+    on a.grouped_monthly_income=b.grouped_monthly_income
+where a.attrition = 'No' and b.attrition='Yes';
