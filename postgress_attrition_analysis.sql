@@ -356,4 +356,28 @@ join t1 b
 where a.attrition = 'No' and 
     b.attrition = 'Yes';
 
-
+/*grouping the Ages*/
+with t1 (attrition,grouped_ages)
+    as (
+        select attrition , 
+            case
+                when age < 30 then '<29'
+                when age >=30 and age < 50 then '30-49'   /*grouping ages*/
+                when age >=50 and age < 60 then '50-59'
+                when age >=60 then '>60'
+                end as grouped_age
+        from hr_attrition
+    ),
+    t2(attrition,grouped_ages,counts)
+    as (
+        select attrition ,grouped_ages, count(grouped_ages)
+        from t1 
+        group by grouped_ages,attrition
+    )
+select a.attrition , a.grouped_ages,
+        round((a.counts::decimal/(a.counts+b.counts))*100,2) as rate0,
+        round((b.counts::decimal/(a.counts+b.counts))*100,2) as rate1
+from t2 a
+join t2 b
+    on a.grouped_ages=b.grouped_ages
+where a.attrition = 'No' and b.attrition='Yes';
