@@ -1,6 +1,6 @@
 /*Getting the first 20 rows of the data*/
 select * from hr_attrition
-limit 20;
+limit 20;                    
 
 /*Getting distinct employees*/
 select count(distinct(employee_number)) as Total_employees
@@ -382,7 +382,7 @@ join t2 b
     on a.grouped_ages=b.grouped_ages
 where a.attrition = 'No' and b.attrition='Yes';
 
-/*grouping the Ages*/
+/*grouping the Monthly Income*/
 with t1 (attrition,grouped_monthly_income)
     as (
         select attrition , 
@@ -390,7 +390,7 @@ with t1 (attrition,grouped_monthly_income)
                 when monthly_income <=5000 then '<5000'
                 when monthly_income >5000 and monthly_income <= 10000 then '5000-10000'   /*grouping monthly income*/
                 when monthly_income >10000 then '>10000'
-                end as grouped_age
+                end as grouped_monthly_income
         from hr_attrition
     ),
     t2(attrition,grouped_monthly_income,counts)
@@ -405,4 +405,29 @@ select a.attrition , a.grouped_monthly_income,
 from t2 a
 join t2 b
     on a.grouped_monthly_income=b.grouped_monthly_income
+where a.attrition = 'No' and b.attrition='Yes';
+
+/*grouping the daily rate*/
+with t1 (attrition,grouped_daily_rate)
+    as (
+        select attrition , 
+            case
+                when daily_rate <=500 then '<500'
+                when daily_rate >500 and daily_rate <= 1000 then '500-1000'   /*grouping monthly income*/
+                when daily_rate >1000 then '>1000'
+                end as grouped_daily_rate
+        from hr_attrition
+    ),
+    t2(attrition,grouped_daily_rate,counts)
+    as (
+        select attrition ,grouped_daily_rate, count(grouped_daily_rate)
+        from t1 
+        group by grouped_daily_rate,attrition
+    )
+select a.attrition , a.grouped_daily_rate,
+        round((a.counts::decimal/(a.counts+b.counts))*100,2) as rate0,
+        round((b.counts::decimal/(a.counts+b.counts))*100,2) as rate1
+from t2 a
+join t2 b
+    on a.grouped_daily_rate=b.grouped_daily_rate
 where a.attrition = 'No' and b.attrition='Yes';
