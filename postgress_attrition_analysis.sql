@@ -413,7 +413,7 @@ with t1 (attrition,grouped_daily_rate)
         select attrition , 
             case
                 when daily_rate <=500 then '<500'
-                when daily_rate >500 and daily_rate <= 1000 then '500-1000'   /*grouping monthly income*/
+                when daily_rate >500 and daily_rate <= 1000 then '500-1000'   /*grouping daily income*/
                 when daily_rate >1000 then '>1000'
                 end as grouped_daily_rate
         from hr_attrition
@@ -430,4 +430,55 @@ select a.attrition , a.grouped_daily_rate,
 from t2 a
 join t2 b
     on a.grouped_daily_rate=b.grouped_daily_rate
+where a.attrition = 'No' and b.attrition='Yes';
+
+/*grouping the hourly rate*/
+with t1 (attrition,grouped_hourly_rate)
+    as (
+        select attrition , 
+            case
+                when hourly_rate <=40 then '<40'
+                when hourly_rate >40 and hourly_rate <= 70 then '40-70'   /*grouping hourly rate*/
+                when hourly_rate >70 then '>70'
+                end as grouped_hourly_rate
+        from hr_attrition
+    ),
+    t2(attrition,grouped_hourly_rate,counts)
+    as (
+        select attrition ,grouped_hourly_rate, count(grouped_hourly_rate)
+        from t1 
+        group by grouped_hourly_rate,attrition
+    )
+select a.attrition , a.grouped_hourly_rate,
+        round((a.counts::decimal/(a.counts+b.counts))*100,2) as rate0,
+        round((b.counts::decimal/(a.counts+b.counts))*100,2) as rate1
+from t2 a
+join t2 b
+    on a.grouped_hourly_rate=b.grouped_hourly_rate
+where a.attrition = 'No' and b.attrition='Yes';
+
+/*grouping the monthly rate*/
+with t1 (attrition,grouped_montly_rate)
+    as (
+        select attrition , 
+            case
+                when monthly_rate <=5000 then '<5000'
+                when monthly_rate >5000 and monthly_rate <= 10000 then '5000-10000'   /*grouping monthly rate*/
+                when monthly_rate >10000 and monthly_rate <= 20000 then '10000-20000'   
+                when monthly_rate >20000 then '>20000'
+                end as grouped_montly_rate
+        from hr_attrition
+    ),
+    t2(attrition,grouped_montly_rate,counts)
+    as (
+        select attrition ,grouped_montly_rate, count(grouped_montly_rate)
+        from t1 
+        group by grouped_montly_rate,attrition
+    )
+select a.attrition , a.grouped_montly_rate,
+        round((a.counts::decimal/(a.counts+b.counts))*100,2) as rate0,
+        round((b.counts::decimal/(a.counts+b.counts))*100,2) as rate1
+from t2 a
+join t2 b
+    on a.grouped_montly_rate=b.grouped_montly_rate
 where a.attrition = 'No' and b.attrition='Yes';
