@@ -482,3 +482,32 @@ from t2 a
 join t2 b
     on a.grouped_montly_rate=b.grouped_montly_rate
 where a.attrition = 'No' and b.attrition='Yes';
+
+select * 
+from playlists;
+
+select owner_id , count(owner_id) as playlist_count
+from playlists
+group by owner_id
+order by playlist_count desc;
+
+select * 
+from saved_tracks
+limit 20;
+
+select album_name ,artist_name, count(album_name) as counts
+from saved_tracks
+group by album_name,artist_name
+order by counts DESC
+limit 10;
+
+select artist_name , count(artist_name) as counts
+from saved_tracks
+group by artist_name
+order by counts desc
+limit 10;
+
+select name , duration , artist_name
+from saved_tracks
+order by duration desc
+limit 10;
