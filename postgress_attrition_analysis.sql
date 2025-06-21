@@ -511,3 +511,7 @@ select name , duration , artist_name
 from saved_tracks
 order by duration desc
 limit 10;
+
+select explicit , count(explicit)
+from saved_tracks
+group by explicit;
