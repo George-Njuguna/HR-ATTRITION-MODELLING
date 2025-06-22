@@ -515,3 +515,11 @@ limit 10;
 select explicit , count(explicit)
 from saved_tracks
 group by explicit;
+
+select * 
+from saved_albums;
+
+select artist_name , count(artist_name) as counts
+from saved_albums
+group by artist_name
+order by counts desc;
