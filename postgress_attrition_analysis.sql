@@ -488,6 +488,9 @@ select *
 from saved_tracks
 limit 20;
 
+select count(id)
+from saved_tracks;
+
 select album_name ,artist_name, count(album_name) as counts
 from saved_tracks
 group by album_name,artist_name
