@@ -483,13 +483,6 @@ join t2 b
     on a.grouped_montly_rate=b.grouped_montly_rate
 where a.attrition = 'No' and b.attrition='Yes';
 
-select * 
-from playlists;
-
-select owner_id , count(owner_id) as playlist_count
-from playlists
-group by owner_id
-order by playlist_count desc;
 
 select * 
 from saved_tracks
@@ -516,10 +509,3 @@ select explicit , count(explicit)
 from saved_tracks
 group by explicit;
 
-select * 
-from saved_albums;
-
-select artist_name , count(artist_name) as counts
-from saved_albums
-group by artist_name
-order by counts desc;
