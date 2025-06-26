@@ -518,4 +518,9 @@ from saved_tracks;
 select * 
 from saved_tracks
 order by popularity ASC
-limit 1;
+limit 20;
+
+select * 
+from saved_tracks
+order by popularity DESC
+limit 20;
