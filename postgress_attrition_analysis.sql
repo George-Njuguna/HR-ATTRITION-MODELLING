@@ -514,3 +514,8 @@ group by explicit;
 
 select sum(duration)/(60000)
 from saved_tracks;
+
+select * 
+from saved_tracks
+order by popularity ASC
+limit 1;
