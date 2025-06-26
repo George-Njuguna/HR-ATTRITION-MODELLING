@@ -512,3 +512,5 @@ select explicit , count(explicit)
 from saved_tracks
 group by explicit;
 
+select sum(duration)/(60000*60)
+from saved_tracks;
