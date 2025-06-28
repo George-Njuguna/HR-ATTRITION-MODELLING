@@ -520,7 +520,7 @@ from saved_tracks
 order by popularity ASC
 limit 20;
 
-select * 
+select name , artist_name , popularity 
 from saved_tracks
 order by popularity DESC
 limit 20;
