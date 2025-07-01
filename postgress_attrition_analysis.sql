@@ -537,5 +537,8 @@ from playlists
 where public = FALSE;
 
 select * 
+from top_artists;
+
+select id , name , genre , followers
 from top_artists
-limit 10;
+order by followers desc;
