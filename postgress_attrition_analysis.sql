@@ -531,3 +531,11 @@ from playlists;
 select *
 from playlists
 order by tracks DESC;
+
+select * 
+from playlists 
+where public = FALSE;
+
+select * 
+from top_artists
+limit 10;
