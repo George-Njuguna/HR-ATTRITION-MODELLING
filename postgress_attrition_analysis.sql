@@ -524,3 +524,10 @@ select name , artist_name , popularity
 from saved_tracks
 order by popularity DESC
 limit 20;
+
+select * 
+from playlists;
+
+select *
+from playlists
+order by tracks DESC;
