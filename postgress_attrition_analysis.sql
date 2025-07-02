@@ -554,3 +554,7 @@ order by popularity desc
 limit 5;
 
 select * FROM top_tracks;
+
+select explicit,count(explicit)
+from top_tracks
+group by explicit;
