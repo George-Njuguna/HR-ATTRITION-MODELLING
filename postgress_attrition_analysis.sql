@@ -542,3 +542,14 @@ from top_artists;
 select id , name , genre , followers
 from top_artists
 order by followers desc;
+
+select id , name , popularity
+from top_artists
+order by popularity asc
+limit 5;
+
+select id , name , popularity
+from top_artists
+order by popularity desc;
+
+select * FROM top_tracks;
