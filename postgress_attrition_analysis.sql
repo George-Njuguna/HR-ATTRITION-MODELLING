@@ -550,6 +550,7 @@ limit 5;
 
 select id , name , popularity
 from top_artists
-order by popularity desc;
+order by popularity desc
+limit 5;
 
 select * FROM top_tracks;
