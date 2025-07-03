@@ -553,11 +553,16 @@ from top_artists
 order by popularity desc
 limit 5;
 
-select * FROM top_tracks;
+select * 
+FROM top_tracks;
 
 select explicit,count(explicit)
 from top_tracks
 group by explicit;
+
+select name , artist_name , duration
+from top_tracks
+order by duration desc;
 
 select * 
 from recently_played_tracks;
