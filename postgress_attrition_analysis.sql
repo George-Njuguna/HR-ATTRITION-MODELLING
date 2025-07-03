@@ -558,3 +558,6 @@ select * FROM top_tracks;
 select explicit,count(explicit)
 from top_tracks
 group by explicit;
+
+select * 
+from recently_played_tracks;
