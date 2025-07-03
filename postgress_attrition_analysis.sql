@@ -564,5 +564,15 @@ select name , artist_name , duration
 from top_tracks
 order by duration desc;
 
+select name , artist_name , popularity 
+from top_tracks
+order by popularity DESC
+limit 5;
+
+select name , artist_name , popularity 
+from top_tracks
+order by popularity asc
+limit 5;
+
 select * 
 from recently_played_tracks;
