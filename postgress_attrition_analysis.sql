@@ -582,3 +582,6 @@ from followed_artists;
 
 select *
 from saved_albums;
+
+select *
+from playlists;
