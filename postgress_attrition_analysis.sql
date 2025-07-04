@@ -579,3 +579,6 @@ from recently_played_tracks;
 
 select *
 from followed_artists;
+
+select *
+from saved_albums;
