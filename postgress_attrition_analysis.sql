@@ -576,3 +576,6 @@ limit 5;
 
 select * 
 from recently_played_tracks;
+
+select *
+from followed_artists;
