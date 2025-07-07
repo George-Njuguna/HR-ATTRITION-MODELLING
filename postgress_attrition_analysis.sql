@@ -577,6 +577,9 @@ limit 5;
 select * 
 from recently_played_tracks;
 
+select count(played_at)
+from recently_played_tracks;
+
 select *
 from followed_artists;
 
