@@ -584,6 +584,10 @@ select name,popularity
 from followed_artists
 order by popularity asc;
 
+select name,popularity
+from followed_artists
+order by popularity desc;
+
 select *
 from saved_albums;
 
