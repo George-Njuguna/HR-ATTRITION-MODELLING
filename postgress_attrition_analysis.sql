@@ -580,6 +580,10 @@ from recently_played_tracks;
 select *
 from followed_artists;
 
+select name,popularity
+from followed_artists
+order by popularity asc;
+
 select *
 from saved_albums;
 
