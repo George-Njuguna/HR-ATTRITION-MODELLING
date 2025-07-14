@@ -594,6 +594,10 @@ order by popularity desc;
 select *
 from saved_albums;
 
+select * 
+from saved_albums
+where artist_name = 'Daniel Caesar';
+
 select *
 from playlists;
 
