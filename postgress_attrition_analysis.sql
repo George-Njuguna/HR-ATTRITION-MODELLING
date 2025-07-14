@@ -596,7 +596,8 @@ from saved_albums;
 
 select artist_name , count(artist_name)
 from saved_albums
-group by artist_name;
+group by artist_name
+order by count desc;
 
 
 select * 
