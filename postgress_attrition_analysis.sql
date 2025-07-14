@@ -594,7 +594,7 @@ order by popularity desc;
 select *
 from saved_albums;
 
-select count(artist_name)
+select artist_name , count(artist_name)
 from saved_albums
 group by artist_name;
 
