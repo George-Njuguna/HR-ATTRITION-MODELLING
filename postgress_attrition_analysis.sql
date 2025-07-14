@@ -599,11 +599,6 @@ from saved_albums
 group by artist_name
 order by count desc;
 
-
-select * 
-from saved_albums
-where artist_name = 'Daniel Caesar';
-
 select *
 from playlists;
 
