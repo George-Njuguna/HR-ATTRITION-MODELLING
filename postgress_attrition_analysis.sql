@@ -575,7 +575,8 @@ order by popularity asc
 limit 5;
 
 select * 
-from recently_played_tracks;
+from recently_played_tracks
+order by played_at asc;
 
 select count(played_at)
 from recently_played_tracks;
