@@ -578,8 +578,13 @@ select *
 from recently_played_tracks
 order by played_at asc;
 
+select * 
+from recently_played_tracks
+order by played_at desc;
+
 select count(played_at)
 from recently_played_tracks;
+
 
 select *
 from followed_artists;
